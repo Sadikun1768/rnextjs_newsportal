@@ -7,7 +7,7 @@ import { NavigationMenuContent } from "../ui/navigation-menu"
 import { NavigationMenuLink } from "../ui/navigation-menu"
 import { Switch } from "@/components/ui/switch"
 import { Button } from "@/components/ui/button"
-
+import { IoMenuOutline } from "react-icons/io5";
 
 
 export default function Navbar() {
@@ -21,7 +21,7 @@ export default function Navbar() {
                 </div>
                 {/* end logo */}
 
-                {/* menu */}
+                {/* desktop menu */}
 
               <NavigationMenu className="hidden lg:flex">
                     <NavigationMenuList>
@@ -51,7 +51,7 @@ export default function Navbar() {
                     </NavigationMenuList>
                 </NavigationMenu> 
 
-             {/*end u */}
+             {/*end desktop menu */}
 
                 {/* color mode and button */}
             <div className="hidden lg:flex items-center space-x-8">
@@ -62,6 +62,18 @@ export default function Navbar() {
                 <Button variant="default">Login</Button>
             </div>
 
+
+                {/* mobile hamburger menu */}
+                <div className="lg:hidden">
+                    <Button variant="outline" size="lg">
+                         <IoMenuOutline className="w-8 h-8" /> 
+                        {/* <IoMenuOutline className="text-3xl" /> */}
+
+                    </Button>
+                </div>
+
+
+                {/* end mobile hamburger menu */}
 
             </nav>
         </header >
