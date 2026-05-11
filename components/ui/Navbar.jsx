@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import Link from "next/link"
 import { NavigationMenu } from "../ui/navigation-menu"
 import { NavigationMenuList } from "../ui/navigation-menu"
@@ -6,17 +7,18 @@ import { NavigationMenuItem } from "../ui/navigation-menu"
 import { NavigationMenuTrigger } from "../ui/navigation-menu"
 import { NavigationMenuContent } from "../ui/navigation-menu"
 import { NavigationMenuLink } from "../ui/navigation-menu"
-import { Switch } from "@/components/ui/switch"
 import { Button } from "@/components/ui/button"
-import { IoMenuOutline } from "react-icons/io5";
+import { Switch } from "@/components/ui/switch"
 import { usePathname } from "next/navigation"
+import MobileMenu from "./MobileMenu"
+
+
 
 
 export default function Navbar() {
 
     const pathname = usePathname()
-
-    
+  
     return (
 
         <header className="py-4 shadow-md">
@@ -74,14 +76,8 @@ export default function Navbar() {
 
 
                 {/* mobile hamburger menu */}
-                <div className="lg:hidden">
-                    <Button variant="outline" size="lg">
-                         <IoMenuOutline className="w-8 h-8" /> 
-                        {/* <IoMenuOutline className="text-3xl" /> */}
 
-                    </Button>
-                </div>
-
+               <MobileMenu />
 
                 {/* end mobile hamburger menu */}
 
