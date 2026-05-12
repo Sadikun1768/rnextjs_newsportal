@@ -2,14 +2,8 @@ import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Link } from 'lucide-react'
 
-export default async function NewsCard() {
+export default function NewsCard({article}) {
  
-    const data = await fetch('https://news-api-fs.vercel.app/api/popular')
-
-    const news = await data.json()
-    console.log(news);
-
-
 
     return (
         <div className="bg-white rounded-lg shadow-md p-4 my-4">
@@ -24,7 +18,7 @@ export default async function NewsCard() {
                 />
 
                 <div className="">
-                    <h3 className="text-lg font-semibold">News Title</h3>
+                    <h3 className="text-lg font-semibold">title</h3>
                     <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien augue.</p>
                     <Button variant="default">Read More</Button>
                 </div>
