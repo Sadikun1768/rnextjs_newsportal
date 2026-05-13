@@ -1,5 +1,6 @@
 import Banner from "@/components/ui/Banner";
 import NewsCard from "@/components/ui/NewsCard";
+import NewsLetter from "@/components/ui/NewsLetter";
 import Image from "next/image";
 
 export default async function Home() {
@@ -37,6 +38,9 @@ export default async function Home() {
         </div>
 
       </div>
+
+      <NewsLetter />
+
 
     </div>
   );

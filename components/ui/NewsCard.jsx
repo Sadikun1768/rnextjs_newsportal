@@ -21,9 +21,11 @@ export default function NewsCard({recipe}) {
                 <div className="">
                     <h3 className="text-lg font-semibold">{recipe.name}</h3>
                     <p className="text-gray-600">
-                        {recipes.instructions}
+                        {recipe.ingredients.slice(0, 3).join(',')}
                     </p>
-                    <Button variant="default">Read More</Button>
+
+                     <Button variant="default" className="mt-4 py-2 px-4 ">Read More</Button>
+            
                 </div>
             </div>
 
