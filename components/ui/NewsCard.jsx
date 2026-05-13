@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Link } from 'lucide-react'
 
-export default function NewsCard({article}) {
+export default function NewsCard({post}) {
  
 
     return (

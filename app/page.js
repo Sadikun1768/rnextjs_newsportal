@@ -4,16 +4,16 @@ import Image from "next/image";
 
 export default async function Home() {
 
-  const data = await fetch("https://news-api-fs.vercel.app/api/popular", {
+  const data = await fetch("https://dummyjson.com/posts?limit=6", {
 
     cache: 'no-store'
 
   });
 
   const json = await data.json()
-  const articles = await json.articles
+  const posts = await json.posts
 
-  // console.log(articles);
+  //  console.log(posts);
 
   return (
 
@@ -27,9 +27,9 @@ export default async function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
-          {articles.map((article) => (
+          {posts.map((post) => (
 
-            <NewsCard key={article.id} article={article} />
+            <NewsCard key={post.id} article={post} />
 
           ))}
 
