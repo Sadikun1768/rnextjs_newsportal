@@ -4,16 +4,16 @@ import Image from "next/image";
 
 export default async function Home() {
 
-  const data = await fetch("https://dummyjson.com/posts?limit=6", {
+  const data = await fetch("https://dummyjson.com/recipes", {
 
     cache: 'no-store'
 
   });
 
   const json = await data.json()
-  const posts = await json.posts
+  const recipes = await json.recipes
 
-  //  console.log(posts);
+  //  console.log(recipes);
 
   return (
 
@@ -25,11 +25,11 @@ export default async function Home() {
 
         <h2 className="text-2xl font-bold">Latest News</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
 
-          {posts.map((post) => (
+          {recipes.slice(0, 3).map((recipe) => (
 
-            <NewsCard key={post.id} article={post} />
+            <NewsCard key={recipe.id} recipe={recipe} />
 
           ))}
 

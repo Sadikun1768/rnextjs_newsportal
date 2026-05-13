@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
+import recipes from '@/types/recipes'
 import { Link } from 'lucide-react'
 
-export default function NewsCard({post}) {
+export default function NewsCard({recipe}) {
  
 
     return (
@@ -11,50 +12,21 @@ export default function NewsCard({post}) {
             <div className='my-4'>
                 <Image
                     className='mb-2 md:h-40 rounded hover:scale-100 transition-all duration-200 cursor-pointer'
-                    src="/images/news.jpg"
-                    alt="Picture of the news"
+                    src={recipe.image}
+                    alt={recipe.name}
                     width={300}
                     height={200}
                 />
 
                 <div className="">
-                    <h3 className="text-lg font-semibold">title</h3>
-                    <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien augue.</p>
+                    <h3 className="text-lg font-semibold">{recipe.name}</h3>
+                    <p className="text-gray-600">
+                        {recipes.instructions}
+                    </p>
                     <Button variant="default">Read More</Button>
                 </div>
             </div>
-            <div className='my-4'>
-                <Image
-                    className='mb-2 md:h-40 rounded hover:scale-100 transition-all duration-200 cursor-pointer'
-                    src="/images/news.jpg"
-                    alt="Picture of the news"
-                    width={300}
-                    height={200}
-                />
 
-                <div className="">
-                    <h3 className="text-lg font-semibold">News Title</h3>
-                    <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien augue.</p>
-                    <Button variant="default">Read More</Button>
-                </div>
-            </div>
-            <div className='my-4'>
-                <Image
-                     className='mb-2 md:h-40 rounded hover:scale-100 transition-all duration-200 cursor-pointer'
-                    src="/images/news.jpg"
-                    alt="Picture of the news"
-                    width={300}
-                    height={200}
-                />
-
-                <div className="">
-                    <h3 className="text-lg font-semibold">News Title</h3>
-                    <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien augue.</p>
-                    
-                    <Button variant="default">Read More</Button>
-                 
-                </div>
-            </div>
         </div>
     )
 }
