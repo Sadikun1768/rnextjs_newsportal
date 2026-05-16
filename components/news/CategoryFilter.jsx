@@ -9,19 +9,20 @@ import { SelectContent } from "@/components/ui/select";
 
 export default function CategoryFilter({ onCategoryChange }) {
 
-    const categories = [" Pizza", "Vegetarian", "Chocolate", "Chicken", "Beef", "Pasta", "Seafood", "Salad", "Soup", "Dessert"];
+    const categories = ["Pizza", "Vegetarian", "Chocolate", "Chicken", "Beef", "Pasta", "Seafood", "Salad", "Soup", "Dessert"];
 
 
     return (
         <div>
             <h3 className="text-xl font-bold">Category Filter:</h3>
             <Select>
-                <SelectTrigger className="w-[180px]">
+                <SelectTrigger className="w-[220px] capitalize">
                     <SelectValue placeholder="Category Select" />
                 </SelectTrigger>
                 <SelectContent>
+                    {/* 3.30 mnt */}
                     <SelectGroup>
-                        <SelectItem key="all" value="all" className="capitalize">
+                        <SelectItem key="all" value="all" className="capitalize rounded-md">
                             All Categories
                         </SelectItem>
                         {categories.map((category) => (
