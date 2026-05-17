@@ -16,8 +16,8 @@ export default function Banner() {
                     />
                 </div>
                 <div className="space-y-4 flex flex-col px-4 py-8">
-                    <h6 className='text-xl'>Tecnology</h6>
-                    <h1 className='text-3xl font-bold text-shadow-cyan-900'>News Portal Tecnology here</h1>
+                    <h6 className='text-xl'>Receipe</h6>
+                    <h1 className='text-3xl font-bold text-shadow-cyan-900'>Receipe Portal here</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, iusto. Adipisci cum labore rem, eaque aliquam tempora vero eligendi odio laudantium magni repudiandae voluptatem laborum iusto ipsam. Eligendi, magnam modi?</p> <br />
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, iusto. Adipisci cum labore rem, eaque aliquam tempora vero eligendi odio laudantium magni repudiandae voluptatem laborum iusto ipsam. Eligendi, magnam modi?</p>
                   <Button variant="default" className="mt-5">Read More</Button>
