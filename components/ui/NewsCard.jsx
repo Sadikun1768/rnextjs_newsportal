@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import recipes from '@/types/recipes'
-import { Link } from 'lucide-react'
-
+// import { Link } from 'lucide-react'
+import Link from 'next/link'
 export default function NewsCard({recipe}) {
  
 
@@ -24,7 +24,12 @@ export default function NewsCard({recipe}) {
                         {recipe.ingredients.slice(0, 3).join(',')}
                     </p>
 
-                     <Button variant="default" className="mt-4 py-2 px-4 ">Read More</Button>
+                <Link href={`/recipe/${recipe.id}`}>
+                      <Button variant="default" className="mt-4 py-2 px-4 ">
+                        View More
+                      </Button>
+                </Link>
+                   
             
                 </div>
             </div>

@@ -12,7 +12,7 @@ export default async function Home() {
   });
 
   const json = await data.json()
-  const recipes = await json.recipes
+  const recipes = json.recipes
 
   //  console.log(recipes);
 
@@ -24,7 +24,7 @@ export default async function Home() {
 
       <div className="my-10">
 
-        <h2 className="text-2xl font-bold">Latest News</h2>
+        <h2 className="text-2xl font-bold">Latest Reciepe</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
 

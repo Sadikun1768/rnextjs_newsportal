@@ -25,7 +25,7 @@ export default function Navbar() {
             <nav className="max-w-7xl mx-auto px-4 flex items-center justify-between">
                 {/* logo */}
                 <div className="text-xl font-bold">
-                    <Link href="/" className="text-orange-700 font-bold text-xl">News Portal</Link>
+                    <Link href="/" className="text-orange-700 font-bold text-xl">Recipe Portal</Link>
                 </div>
                 {/* end logo */}
 
@@ -34,7 +34,8 @@ export default function Navbar() {
                 <NavigationMenu className="hidden lg:flex">
                     <NavigationMenuList>
                         <NavigationMenuItem className="flex items-center space-x-3">
-                            <NavigationMenuLink href="/news" className={`${pathname === "/news" ? "font-semibold text-red-500" : ""} hover:text-cyan-500`}>News</NavigationMenuLink>
+                            <NavigationMenuLink href="/recipe" className={`${pathname === "/recipe" ? "font-semibold text-red-500" : ""}
+                             hover:text-cyan-500`}>Recipe</NavigationMenuLink>
                         </NavigationMenuItem>
 
 
@@ -42,7 +43,7 @@ export default function Navbar() {
 
 
 
-                   <NavigationMenuItem>
+                        <NavigationMenuItem>
                             <NavigationMenuLink href="/services" className={`${pathname === "/services" ? "font-semibold text-red-500" : ""} hover:text-cyan-500`}>Services</NavigationMenuLink>
                             <NavigationMenuContent>
                                 <ul className="shadow-lg bg-white p-4 rounded-lg">
@@ -52,9 +53,9 @@ export default function Navbar() {
                                     <li><NavigationMenuLink href="/services/seo" className={`${pathname === "/services/seo" ? "font-semibold text-red-500" : ""} hover:text-cyan-500`}>Seo</NavigationMenuLink></li>
                                 </ul>
                             </NavigationMenuContent>
-                        </NavigationMenuItem> 
+                        </NavigationMenuItem>
 
-                   
+
 
 
 

@@ -30,16 +30,18 @@ export default function NewsList() {
 
   return (
     <div className="container mx-auto py-10">
-       {/* Search Bar and Category Filter */}
-      <div className="flex flex-col justify-between md:flex-row items-center mb-6 px-4">
-          {/* Search Bar */}
-          <SearchBar onSearch={setSearch} />
+      {/* Search Bar and Category Filter */}
 
-          {/* Category Filter */}
-         <CategoryFilter onCategoryChange={setCategory} />
+      <div className="flex flex-col justify-between md:flex-row items-center mb-6 px-4">
+        
+        {/* Search Bar */}
+        <SearchBar onSearch={setSearch} />
+
+        {/* Category Filter */}
+        <CategoryFilter onCategoryChange={setCategory} />
       </div>
 
-            {/* Recipe Card here */}
+      {/* Recipe Card here */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-4 py-4">
 
         {recipes.map((recipe) => (
